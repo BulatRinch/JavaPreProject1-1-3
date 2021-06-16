@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table ( name  =  " users " )
+@Table ( name  =  " user " )
 
 public class User {
     @Id
@@ -20,6 +20,11 @@ public class User {
 
     @Column(name = "age")
     private Byte age;
+
+    @Override
+    public String toString() {
+        return "User id=" + id +", name=" + name +", lastName=" + lastName +", age=" + age;
+    }
 
     public User() {
 
